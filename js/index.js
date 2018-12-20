@@ -1,11 +1,16 @@
 "use strict";
 
 let giftList = new GiftList(30);
+let correct = new Audio("audio/correct.mp3");
 
 document.getElementById("gift").addEventListener("click", (e) => {
     let result = giftList.next();
     if (result) {
         addRecord(result.gift, result.classmate);
+        
+        correct.pause();
+        correct.currentTime = 0;
+        correct.play();
     }
 });
 
