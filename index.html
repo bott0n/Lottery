@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        
+        <section class='lucky-number-panel'>
+              
+            <button class="open-list-btn" onclick='closeList()'>
+                    抽獎記錄
+            </button>
+            
+            <div class='lucky-number'>
+                ?
+            </div>
+        </section>  
+
+        <section class="gift">
+            <div class="gift-top "></div>
+            <div class="gift-bottom"></div>
+        </section>
+
+        
+
+        <section class='list-panel'>
+            <div class="overlay"></div>
+            <div class='list'>
+                
+                <ul>
+                <li>
+                    No name
+                </li>
+                
+                </li>
+                </ul>
+                <div class='close' onclick='displayList()'><i class="far fa-arrow-alt-circle-right"></i></div>
+            </div>
+            
+        </section>
+        <script>
+            function displayList (){
+                document.getElementsByClassName('list-panel')[0].style.display = 'none';
+            }
+
+            function closeList (){
+                document.getElementsByClassName('list-panel')[0].style.display = 'block';
+            }
+        </script>
+    </body>
+</html>
